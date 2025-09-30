@@ -1,3 +1,7 @@
+
+.section-main{
+    background-color: #c8c9c8;
+}
 .logo_img{
     width: 5%;
 }
@@ -36,7 +40,7 @@
     padding-right: 30px;
     padding-left: 30px;
 }
-.main{
+.section-main{
     height: 100vh;
     background-color: white;
     background-size: cover;
@@ -47,4 +51,96 @@
 .nav-font{
     font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
     font-size: 16px;
+}
+.crew-profile{
+    width: 130px;
+    padding-left: 0px;
+    padding-top: 0px;
+    border-style: solid;
+    border-radius: 200px;
+}
+.box1{
+    text-align: center;
+}
+.arc_banner{
+    width: 100%;
+    height: 50vh;
+}
+.clook{
+    background-color: #e0e0e0d9;
+    border-color: black;
+    border-radius: 20px;
+    margin: 20px;
+    padding: 20px;
+}
+.section1{
+    background-color: #d9d9d9;
+
+}
+.ships{
+    width: 103%;
+}
+.thousandsunny{
+    width: 100%;
+}
+.section2{
+    background-color: white;
+}
+.headline{
+    font-family: Cinzel;
+    font-size: 36px;
+    margin:15px;
+    font-weight: bold;
+}
+.sction-footer{
+    text-align: center;
+    margin: 0px;
+    padding-top: 40px;
+    padding-bottom: 40px;
+    background-color: #eeefee;
+    background-size: cover;
+}
+.hiimange{
+  text-shadow: 2px 2px;
+}
+
+.luffyfoot{
+    text-align: start;
+}
+.carousel-control-prev-icon,
+.carousel-control-next-icon {
+  filter: invert(100%);
+}
+
+/* Wrapper for hover GIF effect */
+.crew-profile-wrapper {
+    position: relative;
+    display: inline-block;
+}
+
+.crew-profile-wrapper img.gif {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+.crew-profile-wrapper:hover img.gif {
+    opacity: 1;
+}
+
+.crew-profile-wrapper img.static {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: opacity 0.3s ease;
+}
+
+.crew-profile-wrapper:hover img.static {
+    opacity: 0;
 }

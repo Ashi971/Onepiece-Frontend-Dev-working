@@ -9,64 +9,272 @@
     <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js" integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV" crossorigin="anonymous"></script>
     <script src="https://kit.fontawesome.com/c0d13b747c.js" crossorigin="anonymous"></script>
-    <link rel="stylesheet" href="static\css\style.css">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400..900&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap" rel="stylesheet">
+
+
     <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap" rel="stylesheet">
 </head>
-<body><nav class="navbar navbar-expand-lg navbar-light bg-light">
-    <div class="container-fluid">
-        <a class="navbar-brand" href="#">
-            <img src="{{ url_for('static', filename='images/vecteezy_luffy-anime-one-piece_21857990.jpg') }}" 
-                 class="logo_img" alt="One Piece Logo" />
-        </a>
-        <button class="navbar-toggler" type="button" data-toggle="collapse" 
-                data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" 
-                aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
-        </button>
-        <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
-            <div class="navbar-nav m-auto nav-font">
-                <a class="nav-link active custom-nav-link" id="nav-item1" href="#sectionWhyChooseUs">Home<span class="sr-only">(current)</span></a>
-                <a class="nav-link custom-nav-link" id="nav-item2" href="#sectionMenu">Most Viewed</a>
-                <a class="nav-link custom-nav-link" id="nav-item3" href="#sectiondelivery">Communities</a>
-                <a class="nav-link custom-nav-link" id="nav-item4" href="#sectionfollow">Login</a>
+<body>
+    <nav class="navbar navbar-expand-lg navbar-light bg-lights ">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="#">
+                <img src="{{ url_for('static', filename='images/vecteezy_luffy-anime-one-piece_21857990.jpg')}}" class="logo_img" alt="Logo" />
+
+            </a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+                <div class="navbar-nav ml-auto nav-font">
+                    <a class="nav-link active custom-nav-link" id="nav-item1 " href="#Home">Home<span class="sr-only ">(current)</span></a>
+                    <a class="nav-link custom-nav-link" id="nav-item2" href="#sectionmostviewed" >Most Viewed</a>
+                    <a class="nav-link custom-nav-link" id="nav-item3" href="#sectioncommunity">Communities</a>
+                    <a class="nav-link custom-nav-link" id="nav-item4" href="#sectionfollow">Login</a>
+                </div>
             </div>
         </div>
-    </div>
-</nav>
-
-<div class="main"> 
-    <div class="container-fluid">
-        <div class="row">
-            <div class="col-7 d-flex flex-column justify-content-center">
-                <div class="ml-5">
-                    <h4 class="para">Welcome to new World</h4>
-                    <h1 class="head">ONEPIECE</h1>
-                    <div class="button d-flex flex-row">
+    </nav>
+<div class="section-main"  id="sectionMain"> 
+    <div class="container-fluid" >
+      <div class="row">
+                <div class="col-7 d-flex flex-column justify-content-center">
+                    <div class="ml-5" >
+                        <h4 class="para">Welcome to new World</h4>
+                        <h1 class="head">ONEPIECE</h1>
+                        <div class="button d-flex flex-row" >
                         <div class="btn-container">
-                            <button type="button" class="custom_button">Watch Now</button>  
+                            <button type="button" class="custom_button ">Watch Now</button>  
                         </div>  
                         <div class="btn-container">  
                             <button type="button" class="custom_button">View More</button>
                         </div>
+                        </div>
+                        <p class="para pt-5">One Piece is a Japanese manga series written and illustrated by Eiichiro Oda. It follows the adventures of Monkey D. Luffy and his crew, the Straw Hat Pirates, as he explores the Grand Line in search of the mythical treasure known as the "One Piece" to become the next King of the Pirates</p>
                     </div>
-                    <p class="para pt-5">
-                        One Piece is a Japanese manga series written and illustrated by Eiichiro Oda. 
-                        It follows the adventures of Monkey D. Luffy and his crew, the Straw Hat Pirates, 
-                        as he explores the Grand Line in search of the mythical treasure known as the 
-                        "One Piece" to become the next King of the Pirates
-                    </p>
+                </div>
+                <div class="col-5">
+                    <img src="{{ url_for('static', filename='images/68c22f22de6d8aacbb38882ade0f7af4.jpg') }}" class="banner_img pt-2" alt="">
+
+
+                </div>
+        </div>
+    </div>
+</div>
+        
+<div class="section-crew-members" id="sectioncrew">
+    <div class="container-fluid">
+        <h3 class="para headline">Crew Members</h3>
+        <div class="row">
+            <div class="col-12 d-flex flex-row justify-content-center">
+
+                <div class="box1 m-3">
+                    <img class="crew-profile" 
+                         src="{{ url_for('static', filename='images/luffy.png') }}" 
+                         data-gif="{{ url_for('static', filename='images/Pi7_Gif.gif') }}" 
+                         data-static="{{ url_for('static', filename='images/luffy.png') }}" alt="">
+                    <h5 class="pt-2">Monkey D Luffy</h5>
+                </div>
+
+                <div class="box1 m-3">
+                    <img class="crew-profile" 
+                         src="{{ url_for('static', filename='images/zoro.png') }}" 
+                         data-gif="{{ url_for('static', filename='images/zoro.gif') }}" 
+                         data-static="{{ url_for('static', filename='images/zoro.png') }}" alt="">
+                    <h5 class="pt-2">Roronoa Zoro</h5>
+                </div>
+
+                <div class="box1 m-3">
+                    <img class="crew-profile" 
+                         src="{{ url_for('static', filename='images/ussop.png') }}" 
+                         data-gif="{{ url_for('static', filename='images/ussop.gif') }}" 
+                         data-static="{{ url_for('static', filename='images/ussop.png') }}" alt="">
+                    <h5 class="pt-2">Captain Ussop</h5>
+                </div>
+
+                <div class="box1 m-3">
+                    <img class="crew-profile" 
+                         src="{{ url_for('static', filename='images/sanji.png') }}" 
+                         data-gif="{{ url_for('static', filename='images/Pi7_Gif (1).gif') }}" 
+                         data-static="{{ url_for('static', filename='images/sanji.png') }}" alt="">
+                    <h5 class="pt-2">Sanji</h5>
+                </div>
+
+                <div class="box1 m-3">
+                    <img class="crew-profile" 
+                         src="{{ url_for('static', filename='images/sanji.png') }}" 
+                         data-gif="{{ url_for('static', filename='images/nami.gif') }}" 
+                         data-static="{{ url_for('static', filename='images/nani.png') }}" alt="">
+                    <h5 class="pt-2">Nami</h5>
+                </div>
+
+                <div class="box1 m-3">
+                    <img class="crew-profile" 
+                         src="{{ url_for('static', filename='images/robin.png') }}" 
+                         data-gif="{{ url_for('static', filename='images/robin.gif') }}" 
+                         data-static="{{ url_for('static', filename='images/robin.png') }}" alt="">
+                    <h5 class="pt-2">Nico Robin</h5>
+                </div>
+
+                <div class="box1 m-3">
+                    <img class="crew-profile" 
+                         src="{{ url_for('static', filename='images/chopper.png') }}" 
+                         data-gif="{{ url_for('static', filename='images/chopper.gif') }}" 
+                         data-static="{{ url_for('static', filename='images/chopper.png') }}" alt="">
+                    <h5 class="pt-2">Dr.Chopper</h5>
+                </div>
+
+            </div>
+
+            <div class="col-12 d-flex flex-row justify-content-center">
+
+                <div class="box1 m-3">
+                    <img class="crew-profile" 
+                         src="{{ url_for('static', filename='images/franky.png') }}" 
+                         data-gif="{{ url_for('static', filename='images/franky.gif') }}" 
+                         data-static="{{ url_for('static', filename='images/franky.png') }}" alt="">
+                    <h5 class="pt-2">Franky</h5>
+                </div>
+
+                <div class="box1 m-3">
+                    <img class="crew-profile" 
+                         src="{{ url_for('static', filename='images/brook.png') }}" 
+                         data-gif="{{ url_for('static', filename='images/brook.gif') }}" 
+                         data-static="{{ url_for('static', filename='images/brook.png') }}" alt="">
+                    <h5 class="pt-2">Brook</h5>
+                </div>
+
+                <div class="box1 m-3">
+                    <img class="crew-profile" 
+                         src="{{ url_for('static', filename='images/jimbey.png') }}" 
+                         data-gif="{{ url_for('static', filename='images/jimbey.gif') }}" 
+                         data-static="{{ url_for('static', filename='images/jimbey.png') }}" alt="">
+                    <h5 class="pt-2">Jimbey</h5>
+                </div>
+
+                <div class="box1 m-3">
+                    <img class="crew-profile" 
+                         src="{{ url_for('static', filename='images/vivi.png') }}" 
+                         data-gif="{{ url_for('static', filename='images/vivi.gif') }}" 
+                         data-static="{{ url_for('static', filename='images/vivi.png') }}" alt="">
+                    <h5 class="pt-2">Nafertari ViVi</h5>
+                </div>
+
+            </div>
+        </div>
+    </div>
+</div>
+<div class="section-leading-story" id="sectionmostviewed">
+                <div class="container-fluid">
+                    <h3 class="para headline">Peek Stories</h3>
+                    <div id="carouselExampleControls" class="carousel slide" data-ride="carousel">
+            <div class="carousel-inner">
+                <div class="carousel-item active">
+                <div class="row clook">
+                        <div class="col-7">
+                            <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Praesentium explicabo beatae ipsa, distinctio id iusto adipisci dolorem ab alias est voluptate eius quisquam. Laborum, quae iure voluptas nemo id sed. Culpa ullam sit sed quo repellendus. Possimus temporibus ex soluta accusantium facere nulla, corrupti dolorum repellendus quo facilis omnis velit veniam aperiam dolorem, hic labore voluptas! Deleniti pariatur, fuga aliquam esse adipisci tempore saepe quidem amet quos totam atque laboriosam, dolor iusto, delectus incidunt vitae vero modi facere voluptates aperiam. Assumenda totam dolor ipsa architecto sunt eos voluptatum praesentium facilis quae dolorum! Blanditiis laboriosam sit ipsa beatae? Esse necessitatibus deleniti, nobis fugiat ipsum voluptas alias enim sapiente voluptatum animi quam, explicabo aut autem porro! Molestiae blanditiis perferendis rerum nostrum unde perspiciatis, minus natus dicta quae, quidem iste repudiandae, iusto eligendi commodi. Fuga, minus! Obcaecati ducimus ipsum quis ex atque nulla necessitatibus repudiandae a officia. Corrupti, nisi! Blanditiis reiciendis optio voluptatem sequi iste dolorum sed veritatis eos, facere fugiat vel, ex asperiores delectus. Error ducimus iure nesciunt repellendus modi eos quasi atque dignissimos saepe delectus nihil at commodi quas enim consequatur tempora minima quaerat nisi fugit ab, voluptatibus sapiente deleniti est autem! Qui magnam perferendis accusamus, voluptatibus illo commodi aut! Excepturi.</p>
+                        </div>
+                        <div class="col-5">
+                            <img src="{{ url_for('static', filename='images/arc1.jpg')}}" class="arc_banner" alt="">
+                        </div>
+                    </div>
+                </div>
+                <div class="carousel-item">
+                <div class="row clook">
+                        <div class="col-7">
+                            <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Praesentium explicabo beatae ipsa, distinctio id iusto adipisci dolorem ab alias est voluptate eius quisquam. Laborum, quae iure voluptas nemo id sed. Culpa ullam sit sed quo repellendus. Possimus temporibus ex soluta accusantium facere nulla, corrupti dolorum repellendus quo facilis omnis velit veniam aperiam dolorem, hic labore voluptas! Deleniti pariatur, fuga aliquam esse adipisci tempore saepe quidem amet quos totam atque laboriosam, dolor iusto, delectus incidunt vitae vero modi facere voluptates aperiam. Assumenda totam dolor ipsa architecto sunt eos voluptatum praesentium facilis quae dolorum! Blanditiis laboriosam sit ipsa beatae? Esse necessitatibus deleniti, nobis fugiat ipsum voluptas alias enim sapiente voluptatum animi quam, explicabo aut autem porro! Molestiae blanditiis perferendis rerum nostrum unde perspiciatis, minus natus dicta quae, quidem iste repudiandae, iusto eligendi commodi. Fuga, minus! Obcaecati ducimus ipsum quis ex atque nulla necessitatibus repudiandae a officia. Corrupti, nisi! Blanditiis reiciendis optio voluptatem sequi iste dolorum sed veritatis eos, facere fugiat vel, ex asperiores delectus. Error ducimus iure nesciunt repellendus modi eos quasi atque dignissimos saepe delectus nihil at commodi quas enim consequatur tempora minima quaerat nisi fugit ab, voluptatibus sapiente deleniti est autem! Qui magnam perferendis accusamus, voluptatibus illo commodi aut! Excepturi.</p>
+                        </div>
+                        <div class="col-5">
+                            <img src="{{ url_for('static', filename='images/arc2.avif')}}" class="arc_banner" alt="">
+                        </div>
+                    </div>
+                </div>
+                <div class="carousel-item">
+                <div class="row clook">
+                        <div class="col-7">
+                            <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Praesentium explicabo beatae ipsa, distinctio id iusto adipisci dolorem ab alias est voluptate eius quisquam. Laborum, quae iure voluptas nemo id sed. Culpa ullam sit sed quo repellendus. Possimus temporibus ex soluta accusantium facere nulla, corrupti dolorum repellendus quo facilis omnis velit veniam aperiam dolorem, hic labore voluptas! Deleniti pariatur, fuga aliquam esse adipisci tempore saepe quidem amet quos totam atque laboriosam, dolor iusto, delectus incidunt vitae vero modi facere voluptates aperiam. Assumenda totam dolor ipsa architecto sunt eos voluptatum praesentium facilis quae dolorum! Blanditiis laboriosam sit ipsa beatae? Esse necessitatibus deleniti, nobis fugiat ipsum voluptas alias enim sapiente voluptatum animi quam, explicabo aut autem porro! Molestiae blanditiis perferendis rerum nostrum unde perspiciatis, minus natus dicta quae, quidem iste repudiandae, iusto eligendi commodi. Fuga, minus! Obcaecati ducimus ipsum quis ex atque nulla necessitatibus repudiandae a officia. Corrupti, nisi! Blanditiis reiciendis optio voluptatem sequi iste dolorum sed veritatis eos, facere fugiat vel, ex asperiores delectus. Error ducimus iure nesciunt repellendus modi eos quasi atque dignissimos saepe delectus nihil at commodi quas enim consequatur tempora minima quaerat nisi fugit ab, voluptatibus sapiente deleniti est autem! Qui magnam perferendis accusamus, voluptatibus illo commodi aut! Excepturi.</p>
+                        </div>
+                        <div class="col-5">
+                            <img src="{{ url_for('static', filename='images/arc3.avif')}}" class="arc_banner" alt="">
+                        </div>
+                    </div>
                 </div>
             </div>
-            <div class="col-5">
-                <img src="{{ url_for('static', filename='images/68c22f22de6d8aacbb38882ade0f7af4.jpg') }}" 
-                     class="banner_img pt-2" alt="One Piece Banner"> 
+            <a class="carousel-control-prev" href="#carouselExampleControls" role="button" data-slide="prev">
+                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                <span class="sr-only">Previous</span>
+            </a>
+            <a class="carousel-control-next" href="#carouselExampleControls" role="button" data-slide="next">
+                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                <span class="sr-only">Next</span>
+            </a>
+            </div>
+</div>
+<div class="section_ships">
+        <h3 class="para headline ">Crew Ships</h3>
+        <div class="section1 container-fluid">  
+            <div class="row">
+                    <div class=" col-7 mt-3">
+                        <h1>Going Merry</h1>
+                        <div class="d-flex flex-row justify-content-center">    
+                            <p> omnis tenetur fuga exercitationem optio cum numquam ad. Vitae tempora corporis delectus similique eum nemo est ipsum blanditiis, veniam, quaerat et tempore non numquam facere suscipit deserunt mollitia? Eius praesentium numquam voluptatum repudiandae veniam tempora corporis ad voluptatibus temporibus, placeat doloribus amet. Modi sapiente blanditiis necessitatibus cumque eius quia expedita voluptas nesciunt! Animi sapiente velit tempora corporis vero nam, voluptas ullam nobis, sed, voluptate dolores! In labore velit ad perferendis cum! Fugit animi dicta excepturi aspernatur placeat eos voluptates distinctio similique impedit asperiores culpa officiis, deserunt, optio temporibus ullam! Quas placeat excepturi eius! In, pariatur.</p>
+                
+                         </div>
+                    </div>
+                    <div class="col-5">
+                        <img class="ships" src="{{ url_for('static', filename='images/GOINMERRY.gif')}}" alt="">
+                    </div>
+            </div>
+        </div>
+        <div class="section2 container-fluid">  
+            <div class="row">
+                    <div class=" col-7 order-1 mt-3">
+                        <h1>Thousand Sunny</h1>
+                        <div class="d-flex flex-row justify-content-center">    
+                            <p> Eius praesentium numquam voluptatum repudiandae veniam tempora corporis ad voluptatibus temporibus, placeat doloribus amet. Modi sapiente blanditiis necessitatibus cumque eius quia expedita voluptas nesciunt! Animi sapiente velit tempora corporis vero nam, voluptas ullam nobis, sed, voluptate dolores! In labore velit ad perferendis cum! Fugit animi dicta excepturi aspernatur placeat eos voluptates distinctio similique impedit asperiores culpa officiis, deserunt, optio temporibus ullam! Quas placeat excepturi eius! In, pariatur.</p>
+                
+                         </div>
+                    </div>
+                    <div class="col-5 order-0">
+                        <img class="thousandsunny" src="{{ url_for('static', filename='images/thousand.gif')}}" alt="">
+                    </div>
+            </div>
+        <hr></hr>
+        </div>
+
+</div>
+    <div class="sction-footer shadow-lg container-fluid" id="sectioncommunity">
+        <div class="">
+            <div class="row">
+            <div class="col-12 ">
+                <div class="d-flex flex-column justify-content-center">
+                    <h4 class="pb-4">Watch now on</h4>
+                <div class="hiimange">
+                    <a href="https://hianime.com.cv/">
+                    <img class="hiimange " src="{{ url_for('static', filename='images/b982ccc876418f020b30c50507f296d5.png')}}" alt="" >
+                </a>   
+                </div>  
+                </div>
             </div>
         </div>
     </div>
 </div>
 
-</div>
+
+<script>
+document.querySelectorAll('.crew-profile').forEach(img => {
+    img.addEventListener('mouseenter', () => {
+        img.src = img.getAttribute('data-gif');
+    });
+    img.addEventListener('mouseleave', () => {
+        img.src = img.getAttribute('data-static');
+    });
+});
+</script>
+
 </body>
 </html>
